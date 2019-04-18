@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+  <!-- Google fonts CSS -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <!-- social link CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+
+/* font doptions:'Montserrat'*/
+body {font-family: "Helvetica Neue",Helvetica,Arial,Roboto,sans-serif; font-size: 0.9rem;}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 7px;
+  width: 7px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+td a:link {
+  color: #333;
+}
+
+/* visited link */
+td a:visited {
+  color: #333;
+}
+
+/* mouse over link */
+td a:hover {
+  color: #333;
+}
+
+/* selected link */
+td a:active {
+  color: #;
+  text-decoration: underline;
+}
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.btn-light{background-color:#fff!important; border-color:#ccc!important; }
+.bootstrap-select>.dropdown-toggle.bs-placeholder{color:#333!important;}
+.btn-outline-secondary{color: #333!important; border-color: #ccc!important;}
+
+.fa {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size:1rem;
+  width: 2rem;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius:50%;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+.fa-tumblr {
+  background: #2c4762;
+  color: white;
+}
+
+.table .thead-dark th{text-align: center!important;}
+.table td, .table th{ padding: 7px 3px; vertical-align: middle!important;}
+.btn-primary{color: #333!important; border-color: #ccc!important; background-color: #fff!important;}
+.table th{padding: .36rem}
+.table .thead-dark th{border-style: none; background-color: #c1c8e4; color: #333;padding-top: .5rem; padding-bottom: .5rem;}
+th.line{border-left: 2px solid #84ceeb;}
+.table td, .table th{border-bottom: 1px solid #dee2e6;}
+.addtocart-btn{background: #9bb8ff;
+	           background-image: -webkit-linear-gradient(top, #9bb8ff, #5580e9);
+	           background-image: -moz-linear-gradient(top, #9bb8ff, #5580e9);
+	           background-image:  -ms-linear-gradient(top, #9bb8ff, #5580e9);
+	           background-image:  -o-linear-gradient(top, #9bb8ff, #5580e9);
+	           background-image:  linear-gradient(to bottom, #9bb8ff, #5580e9);
+	           -webkit-border-radius:6px;
+	           -moz-border-radius:6px;
+	           border-radius: 6px;
+	           color: #fff;
+	           font-size: 1.1rem;
+	           padding: .6rem;
+	           border: solid #1b3b8a 1px;
+	           text-decoration:none;
+	           display: inline-block;
+	           cursor: pointer;
+	           text-align: center;
+	           width: 100%;
+	       	   color: #fff;}
+/*---------addtocart btn link style sheet------------*/
+          /* unvisited link */
+          a.addtocart-btn:link {
+            color: #fff;
+            text-decoration: none;
+          }
+
+          /* visited link */
+          a.addtocart-btn:visited {
+            color: #fff;
+            text-decoration: none;
+          }
+
+          /* mouse over link */
+          a.addtocart-btn:hover {
+            color: #fff;
+            text-decoration: none;
+          }
+
+          /* selected link */
+          a.addtocart-btn:active {
+            color: #333;
+            text-decoration: none;
+          }
+form.qty{padding:0 .25rem;}
+
+      .product-detail-btn{
+         background: #f4f4f7;
+         background-image: -webkit-linear-gradient(top, #f4f4f7, #e7e9ec);
+         background-image: -moz-linear-gradient(top, #f4f4f7, #e7e9ec);
+         background-image: -ms-linear-gradient(top, #f4f4f7, #e7e9ec);
+         background-image: -o-linear-gradient(top, #f4f4f7, #e7e9ec);
+         background-image: linear-gradient(to bottom, #f4f4f7, #e7e9ec);
+         -webkit-border-radius: 6px;
+         -moz-border-radius: 6px;
+         border-radius: 6px;
+         color: #000000;
+         font-family: ;
+         font-size: 1.1rem;
+         border: solid #c9cbcf 1px;
+         text-decoration: none;
+         display: inline-block;
+         cursor: pointer;
+         text-align: center;
+         padding: .6rem;
+         width: 100%;
+      }
+      .product-detail-box{margin-top: .6rem; margin-bottom: .6rem;}
+
+
+</style>
+
+    <title>Project Detail Page</title>
+  </head>
+  <body>
+<div class="container">
+    <a href="#" style="position: fixed; top: 10px; right: 10px; z-index: 10; "><i class="fa fa-times fa-lg" style="font-size: 30px; color: #5ab8eb!important;"></i></a>
+    
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" style="margin-top: 5%;">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://www.hollywoodbodyjewelry.com/images/product/bDetail320/BI59-Z1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://www.hollywoodbodyjewelry.com/images/product/bDetail320/BI59.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://www.hollywoodbodyjewelry.com/images/product/bDetail320/BI59-B.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://www.hollywoodbodyjewelry.com/images/product/bDetail320/BI59-DG.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://www.hollywoodbodyjewelry.com/images/product/bDetail320/BI59-P.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://www.hollywoodbodyjewelry.com/images/product/bDetail320/BI59-WH.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://www.hollywoodbodyjewelry.com/images/product/bDetail320/BI59-Y0.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://www.hollywoodbodyjewelry.com/images/product/bDetail320/BI59-Y1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                  </div>
+                </div>
+
+                <!--Dots-->
+                <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                <!--Dots-->
+
+                <h3 style="margin-top: 3%;">BI59</h3>
+                <div style="margin-bottom:3%;">
+                  <span>5 CZ Flower with Opal Glitter Center 316L Surgical Steel Industrial Barbells</span>
+                </div>
+
+        
+
+
+            <!-- <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  Features & Details
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                </div>
+            </div> -->
+
+
+
+
+         <div id="accordion">
+            <div class="card" style="border-left-style: none; border-right-style: none; border-bottom-style: none;">
+              <div class="card-header" id="headingTwo" style="background-color: #fff; text-align: center;padding: .13rem 1.25rem!important;">
+                <h5 class="mb-0" >
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color:#333; text-decoration: none; font-size: 0.9rem;">
+                    Features & Details ▾
+                  </button>
+                </h3>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion" >
+                    <div class="card-body" style="padding-top: .25rem!important; padding: 0;">
+                      <ul style="list-style: none; padding: 0!important; margin-bottom: 0!important;">
+                        <li><strong>Item number:</strong>&nbsp; BI59</li>
+                        <li><strong>Material:</strong>&nbsp;316L Surgical Steel/Brass</li>
+                        <li><strong>Stone:</strong>&nbsp;Resin Imitation Opal/CZ</li>
+                        <li><strong>Sold by:</strong>&nbsp;Piece</li>
+                        <li><strong>Description:</strong>&nbsp;</li>
+                      </ul>
+                      <div class="product-detail-box">
+			             <a class="product-detail-btn" href="#">View G23 Titanium certificate</a>
+			          </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="package-detail">
+                 <div class="dropdown show" style="border-bottom: 1px solid rgba(0,0,0,.125); padding: .53rem 1.25rem!important; text-align: center; ">
+                          <span style="vertical-align: middle;">Package details</span>
+                          <a class="btn btn-secondary dropdown-toggle" style="padding:.175rem .75rem!important;font-size: 0.7rem!important; border-color: #ccc; background-color: #fff!important;color: #333;" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            VR-004-2010
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapseTwo">VR-004-2010</a>
+                            <a class="dropdown-item" href="#">VR-004-1806</a>
+                            <a class="dropdown-item" href="#">VR-004-1808</a>
+                            <a class="dropdown-item" href="#">VR-004-1809</a>
+                            <a class="dropdown-item" href="#">VR-004-1810</a>
+                            <a class="dropdown-item" href="#">VR-004-1606</a>
+                          </div>
+                 </div>
+                 <div id="collapse1" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="pkg-detail-toggle">
+						use the original one
+                    </div>
+                 </div>
+        </div><!--package-detail-box-1-->
+
+
+
+		    <div style="margin-top: 3%;">
+            <img src="https://www.store.hbj/~design/detail/img/sale-3.gif" class="img-fluid" alt="Responsive image">
+        </div>    
+
+
+        <div class="input-group mb-3" style="margin-top: 4%; margin-bottom:5px!important;">
+        <input type="text" class="form-control" placeholder="Quick Quantity" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Apply All</button>
+        </div>
+        </div>
+
+
+
+
+        <div class="table-responsive" >
+        <table class="table" style="color: #333!important; font-size: 0.4rem!important; text-align: center; margin-bottom: 0!important;border-right: 1px solid #DDD;">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Code</th>
+              <th scope="col">Color & Logo</th>
+              <th scope="col">Thickness</th>
+              <th scope="col">Length</th>
+              <th scope="col">Length</th>
+              <th scope="col">Price</th>
+              <th scope="col">Qty</th>
+              
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="line">NOL-592-AB</th>
+              <td>Aurora Borealis</td>
+              <td>20GA (0.8mm)</td>
+              <td>1/4" (6mm)</td>
+              <td>1/4" (6mm)</td>
+              <td><a href=""><a href="#">Login</a></td>
+              <td>
+                  <form class="qty">
+                  <input type="text" name="Quantity" style="border: 1px solid #ccc; margin-bottom: 5%; width:1.5rem;">
+                </form> 
+              </td>
+              
+            </tr>
+            <tr>
+              <th scope="row" class="line">NOL-592-AB</th>
+              <td>Clear</td>
+              <td>20GA (0.8mm)</td>
+              <td>1/4" (6mm)</td>
+              <td>1/4" (6mm)</td>
+              <td>0.70</td>
+              <td>
+                <form class="qty">
+                  <input type="text" name="Quantity" style="border: 1px solid #ccc; margin-bottom: 5%; width:1.5rem;">
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="line">NOL-592-AB</th>
+              <td>Gold Clear</td>
+              <td>20GA (0.8mm)</td>
+              <td>1/4" (6mm)</td>
+              <td>1/4" (6mm)</td>
+              <td>0.70</td>
+              <td>
+                <form class="qty">
+                  <input type="text" name="Quantity" style="border: 1px solid #ccc; margin-bottom: 5%; width:1.5rem;">
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="line">NOL-592-AB</th>
+              <td>Pink</td>
+              <td>20GA (0.8mm)</td>
+              <td>1/4" (6mm)</td>
+              <td>1/4" (6mm)</td>
+              <td>0.70</td>
+              <td>
+                <form class="qty">
+                  <input type="text" name="Quantity" style="border: 1px solid #ccc; margin-bottom: 5%; width:1.5rem;">
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="line">NOL-592-AB</th>
+              <td>Aqua</td>
+              <td>20GA (0.8mm)</td>
+              <td>1/4" (6mm)</td>
+              <td>1/4" (6mm)</td>
+              <td>0.70</td>
+              <td>
+                <form class="qty">
+                  <input type="text" name="Quantity" style="border: 1px solid #ccc; margin-bottom: 5%; width:1.5rem;">
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="line">NOL-592-AB</th>
+              <td>Rose Gold</td>
+              <td>20GA (0.8mm)</td>
+              <td>1/4" (6mm)</td>
+              <td>1/4" (6mm)</td>
+              <td>0.70</td>
+              <td>
+                <form class="qty">
+                  <input type="text" name="Quantity" style="border: 1px solid #ccc; margin-bottom: 5%; width:1.5rem;">
+                </form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+        	<div class="addtocart" style="margin-top: 15px;">
+			  <a class="addtocart-btn" href="#" >Add To Cart: $777.77</a>
+            </div> 
+
+
+              <div style="text-align: center; margin-bottom: 1%; margin-top: 2%;">
+        <span style="font-size: 0.6rem;  color:#333; ">Like it? Share it!</span>
+        </div>
+
+
+      <div class="social" style="text-align: center; margin-bottom: 5%; width:100%; ">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-pinterest"></a>
+        
+      </div>
+              
+              
+
+                
+
+</div> <!--Container-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/i18n/defaults-*.min.js"></script>
+
+  </body>
+</html>
